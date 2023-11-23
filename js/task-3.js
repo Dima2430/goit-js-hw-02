@@ -1,20 +1,9 @@
-// function getElementWidth(content, padding, border) {
-//     const contentWidth = parseInt(content)
-//     const paddingWidth = parseInt(padding)
-//     const borderWidth = parseInt(border)
-//     return contentWidth + paddingWidth * 2 + borderWidth * 2;
-// }
-
-// console.log(getElementWidth("50px", "8px", "4px")); // 74
-// console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-// console.log(getElementWidth("200px", "0px", "0px")); // 200
-
 function checkForSpam(message) {
-     
-    if ( message.toLowerCase().includes("spam")) {
+    message = message.toLowerCase();
+    if ( message.includes("spam")) {
         return true;
-    } else if (message.toLowerCase().includes("sale")) {
-return true;
+    }else if (message.includes("sale")) {
+        return true;
     }else {
         return false;
 }
